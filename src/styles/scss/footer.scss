@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 209px;
+  background-color: $color_footer;
+
+
+  img {
+    width: 122px;
+    height: 40px;
+  }
+
+  p {
+    color: $color_p_footer
+  }
+}

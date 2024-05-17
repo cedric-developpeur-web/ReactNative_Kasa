@@ -1,12 +1,14 @@
 import React from 'react';
+import Header from '../component/Header';
+import Footer from '../component/Footer';
 
 const About = () => {
   return (
     <div>
-      <h1>a porpos</h1>
+      <Header />
+      <Footer />
     </div>
   );
 };
 
 export default About;
-<h1>a porpos</h1>;

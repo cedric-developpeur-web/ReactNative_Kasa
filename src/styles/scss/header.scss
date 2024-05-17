@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  img {
+    width: 145px;
+    height: 47px;
+
+  }
+
+  #acceuil {
+    padding-right: 20px;
+    color: $color_a;
+    text-decoration: none;
+  }
+
+  #propos {
+    padding-left: 10px;
+    color: $color_a;
+    text-decoration: none;
+  }
+}
