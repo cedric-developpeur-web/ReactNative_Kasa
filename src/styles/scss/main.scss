@@ -1,31 +1,53 @@
 main {
-  display: flex;
+  @include line_break;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
   min-width: 335px;
   padding: 10px;
 
-  .banner_beach {
+  .encadrement {
+    position: relative;
     width: 100%;
     height: 111px;
     border-radius: 10px;
-    border: 1px solid $color_banner_beach;
-    object-fit: cover;
 
+    &::after {
+      width: 100%;
+      height: 111px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      content: "";
+    }
+
+    .banner_beach {
+      width: 100%;
+      height: 111px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    p {
+      @include line_break;
+      position: relative;
+      bottom: 80px;
+      left: 16px;
+      margin: 0px;
+      overflow: auto;
+
+      @include banner_beach_p;
+
+      span {
+        @include banner_beach_p;
+      }
+
+    }
   }
 
-  p {
-    color: black;
-    font-weight: 700;
-    font-size: 24px;
-    position: relative;
-    bottom: 80px;
-    left: 16px;
-    margin: 0px;
-    overflow: auto;
 
-  }
+
 
   .logements {
     display: flex;

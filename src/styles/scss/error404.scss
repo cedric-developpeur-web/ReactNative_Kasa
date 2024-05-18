@@ -9,16 +9,16 @@
 }
 
 #message_error {
-  display: flex;
+  @include line_break;
   justify-content: center;
-  flex-wrap: wrap;
   padding-bottom: 100px;
-  @include message_error_p
+  @include message_error_p;
+
+  span {
+    @include message_error_p;
+  }
 }
 
-#message_error span {
-  @include message_error_p
-}
 
 #return_page {
   display: flex;

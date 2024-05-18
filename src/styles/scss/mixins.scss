@@ -3,3 +3,15 @@
   font-weight: 500;
   color: $color_error_404;
 }
+
+@mixin banner_beach_p {
+  color: $color_p_banner_beach;
+  font-weight: 700;
+  font-size: 24px;
+  z-index: 1;
+}
+
+@mixin line_break {
+  display: flex;
+  flex-wrap: wrap;
+}
