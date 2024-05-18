@@ -1,0 +1,29 @@
+.error_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+
+}
+
+#message_error {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  @include message_error_p
+}
+
+#message_error span {
+  @include message_error_p
+}
+
+#return_page {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 100px;
+}

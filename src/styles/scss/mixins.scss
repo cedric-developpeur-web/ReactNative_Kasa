@@ -1,0 +1,5 @@
+@mixin message_error_p {
+  font-size: 18px;
+  font-weight: 500;
+  color: $color_error_404;
+}
