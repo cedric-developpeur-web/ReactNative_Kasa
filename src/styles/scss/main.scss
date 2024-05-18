@@ -1,5 +1,40 @@
-@import 'variables.scss';
-@import 'global.scss';
-@import 'header.scss';
-@import 'footer.scss';
-@import 'font.scss';
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 335px;
+  padding: 10px;
+
+  .banner_beach {
+    width: 100%;
+    height: 111px;
+    border-radius: 10px;
+    border: 1px solid $color_banner_beach;
+    object-fit: cover;
+
+  }
+
+  p {
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    bottom: 80px;
+    left: 16px;
+    margin: 0px;
+    overflow: auto;
+
+  }
+
+  .logements {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 255px;
+    border-radius: 10px;
+    background-color: $color_card_logement;
+
+  }
+
+}
