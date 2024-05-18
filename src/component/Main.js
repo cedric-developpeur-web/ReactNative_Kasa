@@ -3,9 +3,15 @@ import BannerBeach from './BannerBeach';
 import CardLogements from './CardLogements';
 
 const Main = () => {
+  const srcPictureBeach = './asset/picture/picture_beach.png';
+  const altPictureBeach = 'montre un bord de plage';
   return (
     <main>
-      <BannerBeach />
+      <BannerBeach
+        src={srcPictureBeach}
+        alt={altPictureBeach}
+        removeTagP={true}
+      />
       <CardLogements />
       <CardLogements />
       <CardLogements />

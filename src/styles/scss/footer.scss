@@ -14,6 +14,12 @@ footer {
   }
 
   p {
-    color: $color_p_footer
+    @include line_break;
+    flex-direction: column;
+    color: $color_p_footer;
+
+    span {
+      color: $color_p_footer;
+    }
   }
 }

@@ -3,9 +3,9 @@ main {
   justify-content: center;
   gap: 10px;
   min-width: 335px;
-  padding: 10px;
+  padding: 20px;
 
-  .encadrement {
+  .card_banner {
     position: relative;
     width: 100%;
     height: 111px;
@@ -17,7 +17,7 @@ main {
       position: absolute;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
       content: "";
     }
@@ -46,17 +46,37 @@ main {
     }
   }
 
-
-
-
   .logements {
     display: flex;
     gap: 5px;
     width: 100%;
     height: 255px;
     border-radius: 10px;
+    margin-top: 10px;
     background-color: $color_card_logement;
 
   }
 
+}
+
+#input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+
+  input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: $color_input;
+  }
+
+  h4 {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    color: $color_h4;
+  }
 }
