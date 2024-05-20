@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerBeach from './BannerBeach';
-import CardLogements from './CardLogements';
+import AnnoncesData from './AnnoncesData';
 
 const Main = () => {
   const srcPictureBeach = './asset/picture/picture_beach.png';
@@ -12,26 +12,7 @@ const Main = () => {
         alt={altPictureBeach}
         removeTagP={true}
       />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
-      <CardLogements />
+      <AnnoncesData />
     </main>
   );
 };
