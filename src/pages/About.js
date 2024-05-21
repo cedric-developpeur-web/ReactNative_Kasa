@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import BannerBeach from '../component/BannerBeach';
-import Imput from '../component/Imput';
+import Banner from '../component/Banner';
+import CollapseImput from '../component/CollapseImput';
 
 const About = () => {
   const srcPictureMontain = './asset/picture/picture_montain.png';
@@ -11,12 +11,15 @@ const About = () => {
     <div>
       <Header />
       <main>
-        <BannerBeach
+        <Banner
           src={srcPictureMontain}
           alt={altPictureMontain}
           removeTagP={false}
         />
-        <Imput />
+        <CollapseImput />
+        <CollapseImput />
+        <CollapseImput />
+        <CollapseImput />
       </main>
       <Footer />
     </div>

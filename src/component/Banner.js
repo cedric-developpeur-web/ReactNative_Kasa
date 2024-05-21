@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BannerBeach = ({ src, alt, removeTagP }) => {
+const Banner = ({ src, alt, removeTagP }) => {
   return (
     <div className="card_banner">
       <img className="banner_beach" src={src} alt={alt} />
@@ -13,4 +13,4 @@ const BannerBeach = ({ src, alt, removeTagP }) => {
   );
 };
 
-export default BannerBeach;
+export default Banner;

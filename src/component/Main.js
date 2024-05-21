@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerBeach from './BannerBeach';
+import Banner from './Banner';
 import AnnoncesData from './AnnoncesData';
 
 const Main = () => {
@@ -7,11 +7,7 @@ const Main = () => {
   const altPictureBeach = 'montre un bord de plage';
   return (
     <main>
-      <BannerBeach
-        src={srcPictureBeach}
-        alt={altPictureBeach}
-        removeTagP={true}
-      />
+      <Banner src={srcPictureBeach} alt={altPictureBeach} removeTagP={true} />
       <AnnoncesData />
     </main>
   );
