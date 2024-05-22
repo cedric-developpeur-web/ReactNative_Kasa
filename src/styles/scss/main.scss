@@ -5,6 +5,7 @@ main {
   min-width: 335px;
   padding: 20px;
 
+  // style pour afficher la banner + le titre
   .card_banner {
     position: relative;
     width: 100%;
@@ -46,6 +47,7 @@ main {
   }
 }
 
+// style pour afficher les images et titre des locations
 .rental {
   @include line_break;
 
@@ -71,17 +73,32 @@ main {
   }
 }
 
-#collapse_imput {
-  width: 100%;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background: $color_collapse;
+// style de la page à propos pour les menus deroulant
+#menu {
+  display: contents;
 
-  h4 {
-    position: relative;
-    bottom: 30px;
-    left: 10px;
-    color: $color_h4;
+  .collapse_imput {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: $color_collapse;
+
+
+    h4 {
+      position: relative;
+      top: 8px;
+      left: 10px;
+      color: $color_h4;
+    }
   }
+}
+
+#menu p {
+  display: none;
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+  padding: 0 17px;
+  font-weight: 500;
 }
