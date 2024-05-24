@@ -14,11 +14,21 @@
     padding-right: 20px;
     color: $color_a;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   #propos {
     padding-left: 10px;
     color: $color_a;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
