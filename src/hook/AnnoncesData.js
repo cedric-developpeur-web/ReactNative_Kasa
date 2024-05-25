@@ -1,5 +1,5 @@
 // importation des hooks (useEffect gére les effets secondaire) (useState défini l'état)
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AnnoncesData = () => {
   // declare un etat local (annonces) setAnnonces est la fonction qui sert a mettre a jour useState vient initialiser annonces avec un tableau vide
@@ -20,18 +20,7 @@ const AnnoncesData = () => {
     };
     fetchData();
   }, []);
-  return (
-    <>
-      {annonces.map((annonce) => (
-        // la balise parent qui récuperer les id de chaque images
-        <div className="rental" key={annonce.id}>
-          {/*je vient récuperer url de mes images grâce a cover dans src*/}
-          <img src={annonce.cover} alt={annonce.description} />
-          <p>{annonce.title}</p>
-        </div>
-      ))}
-    </>
-  );
+  return annonces;
 };
 
 export default AnnoncesData;

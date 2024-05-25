@@ -29,11 +29,7 @@ const About = () => {
     <div>
       <Header />
       <main>
-        <Banner
-          src={srcPictureMontain}
-          alt={altPictureMontain}
-          removeTagP={false}
-        />
+        <Banner src={srcPictureMontain} alt={altPictureMontain} />
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
         {collapses.map((collapse, index) => (
           <CollapseImput
