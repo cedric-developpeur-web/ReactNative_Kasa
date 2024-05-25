@@ -103,7 +103,7 @@ main {
     border: none;
     background: $color_collapse;
 
-    .cheveron_up {
+    .chevron_up {
       position: absolute;
       right: 40px;
       margin-top: 10px;
@@ -121,15 +121,21 @@ main {
       left: 10px;
       color: $color_h4;
     }
+
   }
-}
 
+  .descriptif {
+    display: none;
+    position: relative;
+    bottom: 5px;
+    padding: 0 17px;
+    font-weight: 500;
+  }
 
-#menu p {
-  display: none;
-  position: relative;
-  bottom: 5px;
-
-  padding: 0 17px;
-  font-weight: 500;
+  .open {
+    display: block;
+    position: relative;
+    padding: -1px 17px;
+    font-weight: 500;
+  }
 }
