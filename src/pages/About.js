@@ -31,13 +31,15 @@ const About = () => {
       <main>
         <Banner src={srcPictureMontain} alt={altPictureMontain} />
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
-        {collapses.map((collapse, index) => (
-          <CollapseImput
-            key={index}
-            title={collapse.title}
-            description={collapse.description}
-          />
-        ))}
+        <section>
+          {collapses.map((collapse, index) => (
+            <CollapseImput
+              key={index}
+              title={collapse.title}
+              description={collapse.description}
+            />
+          ))}
+        </section>
       </main>
       <Footer />
     </div>

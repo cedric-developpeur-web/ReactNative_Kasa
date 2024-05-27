@@ -27,13 +27,15 @@ const Housing = () => {
       <Header />
       <main>
         <Carousel />
-        {collapsesLog.map((collapselog, index) => (
-          <CollapseImput
-            key={index}
-            title={collapselog.title}
-            description={collapselog.description}
-          />
-        ))}
+        <section>
+          {collapsesLog.map((collapselog, index) => (
+            <CollapseImput
+              key={index}
+              title={collapselog.title}
+              description={collapselog.description}
+            />
+          ))}
+        </section>
       </main>
       <Footer />
     </div>
