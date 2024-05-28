@@ -1,30 +1,15 @@
 // import { useEffect, useState } from 'react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import Banner from '../component/Banner';
 import CollapseImput from '../component/CollapseImput';
+import DataCollapseAbout from '../datas/DataCollapseAbout';
 
 const About = () => {
   const srcPictureMontain = './asset/picture/picture_montain.png';
   const altPictureMontain = 'plage montagne';
-
-  const [collapses, setCollapses] = useState([]);
-  useEffect(() => {
-    // vient recuperer les données du fichier json
-    const fetchData = async () => {
-      const reponse = await fetch('/fichier_json/collapse.json');
-      if (!reponse.ok) {
-        console.error('error');
-        return;
-      }
-      // vient conserver les données recuperer du fichier json
-      const data = await reponse.json();
-      // met a jour l'etat (annonces) avec les donnée du fichier json lors du permier rendu du component
-      setCollapses(data);
-    };
-    fetchData();
-  }, []);
+  const input = DataCollapseAbout();
   return (
     <div>
       <Header />
@@ -32,7 +17,7 @@ const About = () => {
         <Banner src={srcPictureMontain} alt={altPictureMontain} />
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
         <section>
-          {collapses.map((collapse, index) => (
+          {input.map((collapse, index) => (
             <CollapseImput
               key={index}
               title={collapse.title}

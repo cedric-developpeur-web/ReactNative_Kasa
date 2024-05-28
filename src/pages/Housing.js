@@ -1,34 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import Carousel from '../component/Carousel';
 import CollapseImput from '../component/CollapseImput';
+import DataCollapseLog from '../datas/DataCollapseLog';
 
 const Housing = () => {
-  const [collapsesLog, setCollapsesLog] = useState([]);
-  useEffect(() => {
-    // vient recuperer les données du fichier json
-    const fetchData = async () => {
-      const reponse = await fetch('/fichier_json/collapse_logement.json');
-      if (!reponse.ok) {
-        console.error('error');
-        return;
-      }
-      // vient conserver les données recuperer du fichier json
-      const data = await reponse.json();
-      // met a jour l'etat (annonces) avec les donnée du fichier json lors du permier rendu du component
-      setCollapsesLog(data);
-    };
-    fetchData();
-  }, []);
+  const arrowRight = 'asset/picture/arrow_right.png';
+  const arrowLeft = 'asset/picture/arrow_left.png';
+  const imput = DataCollapseLog();
 
   return (
     <div>
       <Header />
       <main>
-        <Carousel />
+        <div className="carrousel">
+          <img className="arrow_right" src={arrowRight} alt="arrow next"></img>
+          <img className="picture" src="" alt=""></img>
+          <img
+            className="arrow_left"
+            src={arrowLeft}
+            alt="arrow previous"
+          ></img>
+          <div className="number_of_number"></div>
+        </div>
         <section>
-          {collapsesLog.map((collapselog, index) => (
+          {imput.map((collapselog, index) => (
             <CollapseImput
               key={index}
               title={collapselog.title}
