@@ -6,7 +6,7 @@ const Banner = ({ src, alt, removeTagP }) => {
       <img className="banner_beach" src={src} alt={alt} />
       {removeTagP && (
         <p>
-          Chez vous,<span>partout et ailleurs</span>
+          Chez vous,&nbsp;<span>partout et ailleurs</span>
         </p>
       )}
     </div>

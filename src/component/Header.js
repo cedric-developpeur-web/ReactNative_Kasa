@@ -10,10 +10,10 @@ const Header = () => {
       <nav>
         {/* navlink en react correspond a la balise (a) en html pour les liens 
         nous utilison to="/" pour lui attributer la page ou sera rediriger le lien */}
-        <NavLink id="acceuil" to="/">
+        <NavLink className="acceuil" to="/">
           ACCUEIL
         </NavLink>
-        <NavLink id="propos" to="/about">
+        <NavLink className="propos" to="/about">
           A PROPOS
         </NavLink>
       </nav>

@@ -60,6 +60,8 @@ const Housing = () => {
           ></img>
           <div className="number_of_number"></div>
         </div>
+        <h1>{annonce.title}</h1>
+        <h3>{annonce.location}</h3>
         <div className="btn_logements">
           {annonce.tags.map((tag, index) => (
             <button id="tags" key={index}>
@@ -71,6 +73,8 @@ const Housing = () => {
           {[...Array(5)].map((_, index) => (
             <FontAwesomeIcon key={index} className="stars" icon={faStar} />
           ))}
+          <h5>{annonce.host.name}</h5>
+          <img src={annonce.host.picture} alt={annonce.host.name}></img>
         </div>
         <section>
           {imput.map((collapselog, index) => (
