@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  const logoFooter = 'asset/picture/logo_footer.png';
+  const logoFooter = '../../asset/picture/logo_footer.png';
   return (
     <footer>
       <img src={logoFooter} alt="logo kasa"></img>

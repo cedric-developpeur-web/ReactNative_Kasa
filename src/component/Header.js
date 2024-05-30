@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-  const logoHeader = 'asset/picture/logo_header.png';
+  const logoHeader = '../../asset/picture/logo_header.png';
   return (
     // pour déclarer une class css en react nous utilison className
     <div className="navigation">

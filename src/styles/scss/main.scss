@@ -51,6 +51,7 @@ main {
 // style pour afficher les images et titre des locations
 .rental {
   @include line_break;
+  cursor: pointer;
 
   img {
     @include picture;
@@ -76,6 +77,8 @@ main {
 
   .picture {
     @include picture;
+    object-fit: cover;
+    cursor: pointer;
   }
 
   .arrow_right {
@@ -89,6 +92,38 @@ main {
     margin-top: 117px;
     left: 30px;
   }
+}
+
+.btn_logements {
+  display: flex;
+  gap: 10px;
+
+  #tags {
+    width: 84px;
+    height: 18px;
+    text-align: center;
+    border: transparent;
+    border-radius: 10px;
+    background-color: $color_button;
+    color: $color_font_button;
+  }
+
+}
+
+.iconeStars {
+  display: flex;
+  gap: 5px;
+
+  .stars {
+    width: 18px;
+    height: 18px;
+    color: #FF6060;
+  }
+
+}
+
+.star {
+  color: black;
 }
 
 // style de la page à propos pour les menus deroulant
@@ -113,6 +148,7 @@ main {
     position: relative;
     right: 20px;
     color: $color_chevron_up;
+    cursor: pointer;
   }
 
 }

@@ -10,7 +10,7 @@ const Home = () => {
   const annonces = AnnoncesData();
   const navigate = useNavigate();
   const click = (id) => {
-    navigate(`/Housing/${id}`);
+    navigate(`/housing/${id}`);
   };
 
   return (
