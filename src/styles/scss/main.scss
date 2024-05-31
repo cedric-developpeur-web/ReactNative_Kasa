@@ -83,13 +83,13 @@ main {
 
   .arrow_right {
     @include arrow_carrousel;
-    margin-top: 119px;
+    margin-top: 140px;
     right: 30px;
   }
 
   .arrow_left {
     @include arrow_carrousel;
-    margin-top: 117px;
+    margin-top: 138px;
     left: 30px;
   }
 }
