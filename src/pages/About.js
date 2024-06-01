@@ -14,7 +14,7 @@ const About = () => {
     <div>
       <Header />
       <main>
-        <Banner src={srcPictureMontain} alt={altPictureMontain} />
+        <Banner src={srcPictureMontain} alt={altPictureMontain} light />
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
         <section>
           {input.map((collapse, index) => (

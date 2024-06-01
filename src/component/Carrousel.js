@@ -1,29 +1,21 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import AnnoncesData from '../datas/AnnoncesData';
-const Carrousel = () => {
+const Carrousel = ({ images }) => {
   const arrowRight = '../../asset/picture/arrow_right.png';
   const arrowLeft = '../../asset/picture/arrow_left.png';
 
-  const { id } = useParams();
-  const annonces = AnnoncesData();
-  const annonce = annonces.find((annonce) => annonce.id === id);
   const [currentPicture, setCurrentPicture] = useState(0);
 
-  if (!annonce) {
+  if (!images) {
     return <div>Annonce non trouvée</div>;
   }
+  let index = 0;
 
   const nextPicture = () => {
-    setCurrentPicture((index) =>
-      index === annonce.pictures.length - 1 ? 0 : index + 1
-    );
+    setCurrentPicture((index) => (index === images.length - 1 ? 0 : index + 1));
   };
 
   const prevPicture = () => {
-    setCurrentPicture((index) =>
-      index === 0 ? annonce.pictures.length - 1 : index - 1
-    );
+    setCurrentPicture((index) => (index === 0 ? images.length - 1 : index - 1));
   };
 
   return (
@@ -37,7 +29,7 @@ const Carrousel = () => {
         ></img>
         <img
           className="picture"
-          src={annonce.pictures[currentPicture]}
+          src={images[currentPicture]}
           alt={`logement $[currentPicture]`}
         ></img>
         <img
@@ -46,8 +38,10 @@ const Carrousel = () => {
           alt="arrow previous"
           onClick={prevPicture}
         ></img>
-        <div className="number_of_number"></div>
       </div>
+      <span className="number_of_number">
+        {index + 1}/{currentPicture}
+      </span>
     </>
   );
 };

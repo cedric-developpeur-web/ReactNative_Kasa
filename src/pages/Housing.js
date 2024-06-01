@@ -6,13 +6,10 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import CollapseImput from '../component/CollapseImput';
-import DataCollapseLog from '../datas/DataCollapseLog';
 import AnnoncesData from '../datas/AnnoncesData';
 import Carrousel from '../component/Carrousel';
 
 const Housing = () => {
-  const imput = DataCollapseLog();
-
   // je vient récuperer l'id dans url pour chaque carte logement
   const { id } = useParams();
   const annonces = AnnoncesData();
@@ -26,7 +23,7 @@ const Housing = () => {
     <div>
       <Header />
       <main>
-        <Carrousel />
+        <Carrousel images={annonce.pictures} />
         <h1>{annonce.title}</h1>
         <h3>{annonce.location}</h3>
         <div className="btn_logements">
@@ -40,17 +37,26 @@ const Housing = () => {
           {[...Array(5)].map((_, index) => (
             <FontAwesomeIcon key={index} className="stars" icon={faStar} />
           ))}
-          <h5>{annonce.host.name}</h5>
-          <img src={annonce.host.picture} alt={annonce.host.name}></img>
+          <span className="conseiller">
+            <h5>{annonce.host.name}</h5>
+            <img src={annonce.host.picture} alt={annonce.host.name}></img>
+          </span>
         </div>
         <section>
-          {imput.map((collapselog, index) => (
-            <CollapseImput
-              key={index}
-              title={collapselog.title}
-              description={collapselog.description}
-            />
-          ))}
+          <CollapseImput
+            title={'Description'}
+            description={annonce.description}
+          />
+          <CollapseImput
+            title={'Équipements'}
+            description={
+              <ul>
+                {annonce.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+          />
         </section>
       </main>
       <Footer />
