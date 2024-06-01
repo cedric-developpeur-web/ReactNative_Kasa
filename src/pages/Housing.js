@@ -18,6 +18,17 @@ const Housing = () => {
   if (!annonce) {
     return <div>Annonce non trouvée</div>;
   }
+  const renderStars = () => {
+    const rating = annonce.rating;
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      const starClass = i < rating ? 'stars' : 'star';
+      stars.push(
+        <FontAwesomeIcon key={i} className={starClass} icon={faStar} />
+      );
+    }
+    return stars;
+  };
 
   return (
     <div>
@@ -34,9 +45,7 @@ const Housing = () => {
           ))}
         </div>
         <div className="iconeStars">
-          {[...Array(5)].map((_, index) => (
-            <FontAwesomeIcon key={index} className="stars" icon={faStar} />
-          ))}
+          {renderStars()}
           <span className="conseiller">
             <h5>{annonce.host.name}</h5>
             <img src={annonce.host.picture} alt={annonce.host.name}></img>
