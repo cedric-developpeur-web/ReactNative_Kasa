@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ErrorPage = () => {
-  const logoError = './asset/picture/404.png';
+  const logoError = '../asset/picture/404.png';
   return (
     <section>
       <div className="error_logo">

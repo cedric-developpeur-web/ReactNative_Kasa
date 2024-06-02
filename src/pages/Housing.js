@@ -8,6 +8,7 @@ import Footer from '../component/Footer';
 import CollapseImput from '../component/CollapseImput';
 import AnnoncesData from '../datas/AnnoncesData';
 import Carrousel from '../component/Carrousel';
+import ErrorPage from '../component/ErrorPage';
 
 const Housing = () => {
   // je vient récuperer l'id dans url pour chaque carte logement
@@ -16,7 +17,13 @@ const Housing = () => {
   const annonce = annonces.find((annonce) => annonce.id === id);
 
   if (!annonce) {
-    return <div>Annonce non trouvée</div>;
+    return (
+      <>
+        <Header />
+        <ErrorPage />
+        <Footer />
+      </>
+    );
   }
   const renderStars = () => {
     const rating = annonce.rating;
