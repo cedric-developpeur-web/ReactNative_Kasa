@@ -26,7 +26,7 @@ const Collapse = ({ title, description }) => {
       </div>
       <div>
         {/* quand je clique sur le chevron si opening et false la classe close s'applique mais si opening et true la classe open s'applique */}
-        <p className={opening ? 'open' : 'close'}>{description}</p>
+        <span className={opening ? 'open' : 'close'}>{description}</span>
       </div>
     </>
   );
