@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main id="about">
         <Banner src={srcPictureMontain} alt={altPictureMontain} light />
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
         <section>

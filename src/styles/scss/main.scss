@@ -5,6 +5,13 @@ main {
   min-width: 335px;
   padding: 20px;
 
+  @media screen and (min-width : 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: auto;
+    padding: 0px;
+  }
+
   // style pour afficher la banner + le titre
   .card_banner {
     position: relative;
@@ -12,6 +19,10 @@ main {
     height: 111px;
     border-radius: 10px;
     margin-bottom: 20px;
+
+    @media screen and (min-width : 768px) {
+      margin: 10px 5px 10px 5px;
+    }
 
     &::after {
       width: 100%;
@@ -39,8 +50,12 @@ main {
       left: 16px;
       margin: 0;
       overflow: auto;
-
       @include banner_beach_p;
+
+      @media screen and (min-width : 768px) {
+        bottom: 70px;
+        justify-content: center;
+      }
 
       span {
         @include banner_beach_p;
@@ -58,19 +73,29 @@ main {
   @include line_break;
   cursor: pointer;
 
+  @media screen and (min-width : 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   img {
     @include picture;
+
+    @media screen and (min-width : 768px) {
+      width: 340px;
+      height: 340px;
+    }
   }
 
   p {
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
     bottom: 30px;
     width: 100%;
     height: 30px;
     margin: 0;
-    padding-left: 5px;
     border-radius: 0 0 10px 10px;
     background-color: rgba(0, 0, 0, 0.6);
     color: $color_rental_p;

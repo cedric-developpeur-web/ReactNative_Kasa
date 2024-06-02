@@ -40,7 +40,7 @@ const Housing = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main id="log">
         <Carrousel images={annonce.pictures} />
         <h1>{annonce.title}</h1>
         <h3>{annonce.location}</h3>
