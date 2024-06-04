@@ -8,7 +8,6 @@ const Carrousel = ({ images }) => {
   if (!images || images.length === 0) {
     return <div>Annonce non trouvée</div>;
   }
-  // let index = 0;
 
   const nextPicture = () => {
     setCurrentPicture((index) => (index === images.length - 1 ? 0 : index + 1));
