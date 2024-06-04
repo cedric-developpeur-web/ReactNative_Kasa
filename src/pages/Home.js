@@ -8,10 +8,6 @@ const Home = () => {
   const srcPictureBeach = './asset/picture/picture_beach.png';
   const altPictureBeach = 'montre un bord de plage';
   const annonces = AnnoncesData();
-  // const navigate = useNavigate();
-  // const click = (id) => {
-  //   navigate(`/housing/${id}`);
-  // };
 
   return (
     <div>
