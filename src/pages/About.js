@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import Banner from '../component/Banner';
-import CollapseImput from '../component/CollapseImput';
+import Collapses from '../component/Collapses';
 import DataCollapseAbout from '../datas/DataCollapseAbout';
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
         {/* je vient crée 4 collapse en leur indiquant de recupérer les données du tableau qui est stocke dans const collapses */}
         <section>
           {input.map((collapse, index) => (
-            <CollapseImput
+            <Collapses
               key={index}
               title={collapse.title}
               description={collapse.description}

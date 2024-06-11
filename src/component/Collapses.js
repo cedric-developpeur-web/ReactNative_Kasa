@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Collapse = ({ title, description }) => {
   // par defaut useState et a false
@@ -11,18 +9,17 @@ const Collapse = ({ title, description }) => {
   };
   return (
     <>
-      <div className="collapse_imput">
+      <div className="collapses">
         <h4>{title}</h4>
         {/* si je clic sur l'icone du chevron je lui applique une rotation de -180deg avec une transition de 0.5 */}
-        <FontAwesomeIcon
-          className={'chevron'}
+        <i
+          className={`fa-solid fa-chevron-up`}
           style={{
             transform: opening ? 'rotate(-180deg)' : 'none',
             transition: 'transform 0.5s ease',
           }}
-          icon={faChevronUp}
           onClick={toggleDescription}
-        />
+        ></i>
       </div>
       <div>
         {/* quand je clique sur le chevron si opening et false la classe close s'applique mais si opening et true la classe open s'applique */}

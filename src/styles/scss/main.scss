@@ -166,19 +166,22 @@ h3 {
   gap: 5px;
   margin-bottom: 20px;
 
-  .stars {
-    width: 18px;
+  .fa-star {
+    width: 24px;
     height: 18px;
     color: $color_stars_actived;
+
   }
 
 }
 
-.star {
-  width: 18px;
+.iconeStars .etoile {
+  width: 24px;
   height: 18px;
   color: $color_stars_desactived;
 }
+
+
 
 .conseiller {
   display: flex;
@@ -194,7 +197,7 @@ h3 {
 }
 
 // style de la page à propos pour les menus deroulant
-.collapse_imput {
+.collapses {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -211,13 +214,12 @@ h3 {
     color: $color_h4;
   }
 
-  .chevron {
+  .fa-chevron-up {
     position: relative;
     right: 20px;
     color: $color_chevron_up;
     cursor: pointer;
   }
-
 }
 
 .close {

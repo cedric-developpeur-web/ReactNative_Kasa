@@ -9,8 +9,11 @@ ul {
 
 #about {
   flex-direction: column;
-  margin-left: 10px;
-  margin-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 15px;
+    padding: 20px;
+  }
 }
 
 #log {

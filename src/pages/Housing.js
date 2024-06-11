@@ -1,11 +1,9 @@
 import React from 'react';
 // useParams est un hook qui vient acceder au parametre de l'url on peut extraire une valeur comme un id depuis notre url
 import { useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import CollapseImput from '../component/CollapseImput';
+import Collapses from '../component/Collapses';
 import AnnoncesData from '../datas/AnnoncesData';
 import Carrousel from '../component/Carrousel';
 import ErrorPage from '../component/ErrorPage';
@@ -29,10 +27,9 @@ const Housing = () => {
     const rating = annonce.rating;
     const stars = [];
     for (let i = 0; i < 5; i++) {
-      const starClass = i < rating ? 'stars' : 'star';
-      stars.push(
-        <FontAwesomeIcon key={i} className={starClass} icon={faStar} />
-      );
+      const starClass =
+        i < rating ? 'fa-solid fa-star' : 'fa-solid fa-star etoile';
+      stars.push(<i key={i} className={starClass}></i>);
     }
     return stars;
   };
@@ -59,11 +56,8 @@ const Housing = () => {
           </span>
         </div>
         <section>
-          <CollapseImput
-            title={'Description'}
-            description={annonce.description}
-          />
-          <CollapseImput
+          <Collapses title={'Description'} description={annonce.description} />
+          <Collapses
             title={'Équipements'}
             description={
               <ul>
