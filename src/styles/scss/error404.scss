@@ -2,10 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 100px;
 
+  @media screen and (min-width: 1024px) {
+    img {
+      width: 597px;
+      height: 263px;
+    }
+  }
+}
 
+#error {
+  min-height: 945px;
 }
 
 #message_error {
@@ -14,11 +23,11 @@
   padding-bottom: 100px;
   @include message_error_p;
 
+
   span {
     @include message_error_p;
   }
 }
-
 
 #return_page {
   display: flex;
@@ -26,4 +35,8 @@
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 100px;
+
+  @media screen and (min-width:1024px) {
+    font-size: 18px;
+  }
 }

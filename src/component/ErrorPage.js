@@ -3,7 +3,7 @@ import React from 'react';
 const ErrorPage = () => {
   const logoError = '../asset/picture/404.png';
   return (
-    <section>
+    <section id="error">
       <div className="error_logo">
         <img src={logoError} alt="logo erreur 404" />
       </div>

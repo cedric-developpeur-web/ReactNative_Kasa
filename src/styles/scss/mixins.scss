@@ -2,6 +2,10 @@
   font-size: 18px;
   font-weight: 500;
   color: $color_error_404;
+
+  @media screen and (min-width:1024px) {
+    font-size: 38px;
+  }
 }
 
 @mixin banner_beach_p {
@@ -9,6 +13,10 @@
   font-weight: 700;
   font-size: 24px;
   z-index: 1;
+
+  @media screen and (min-width:1024px) {
+    font-size: 48px;
+  }
 }
 
 @mixin line_break {
