@@ -1,0 +1,105 @@
+// style pour afficher les images et titre des locations sur la page home
+.rental {
+  @include line_break;
+  cursor: pointer;
+
+  @media screen and (min-width : 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    @include picture;
+
+    @media screen and (min-width : 768px) {
+      width: 340px;
+      height: 340px;
+    }
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $color_rental_p;
+  }
+}
+
+// style pour afficher les images et titre des locations... sur la page hossing
+
+// titre du logement et son emplacement
+h1 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+// création bouton des catgories
+button {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 110px;
+  height: 18px;
+}
+
+.btn_logements {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  #tags {
+    text-align: center;
+    border: transparent;
+    background-color: $color_button;
+    color: $color_font_button;
+  }
+}
+
+// création icone etoile pour la notation
+.iconeStars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+
+  .fa-star {
+    width: 24px;
+    height: 18px;
+    color: $color_stars_actived;
+
+  }
+
+}
+
+.iconeStars .etoile {
+  width: 24px;
+  height: 18px;
+  color: $color_stars_desactived;
+}
+
+// information nom prenom du conseiller avec la photo du conseiller
+.conseiller {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 38px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}

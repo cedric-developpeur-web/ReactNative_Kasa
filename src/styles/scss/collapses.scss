@@ -1,0 +1,41 @@
+// style de la page à propos pour les menus deroulant
+.collapses {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background: $color_collapse;
+
+  h4 {
+    position: absolute;
+    left: 30px;
+    color: $color_h4;
+  }
+
+  .fa-chevron-up {
+    position: relative;
+    right: 20px;
+    color: $color_chevron_up;
+    cursor: pointer;
+  }
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+  position: relative;
+  bottom: 20px;
+  padding: 0 17px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

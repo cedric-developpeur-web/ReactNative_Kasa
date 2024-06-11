@@ -1,0 +1,32 @@
+.carrousel {
+  @include line_break;
+
+  .picture {
+    @include picture;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+
+  .arrow_right {
+    @include arrow_carrousel;
+    margin-top: 140px;
+    right: 30px;
+  }
+
+  .arrow_left {
+    @include arrow_carrousel;
+    margin-top: 138px;
+    left: 30px;
+  }
+}
+
+.number_of_number {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
